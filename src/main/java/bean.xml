@@ -5,8 +5,13 @@
                            http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- Define a bean -->
-    <bean id="Person" class="com.example.course.Person">
+    <bean id="Person" class="com.example.course.Person" init-method="init" destroy-method="destroy">
+      <property name="gender" value="Male" />
+    </bean>
 
+    <bean id="address" class="com.example.course.Address">
+      <property name="street" value="123 1st Street"/>
+      <property name="cityState" value="Houston, Tx"/>
     </bean>
 
 </beans>
